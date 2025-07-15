@@ -1,0 +1,16 @@
+{
+  "name": "@yangyichun/my-utils",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  }
+}
