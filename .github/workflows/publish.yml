@@ -10,9 +10,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '18.x'
-          registry-url: 'https://registry.npmjs.org'  # 设置 npm 源
+          registry-url: 'https://registry.npmjs.org/'  # 设置 npm 源
       - run: npm install  # 安装依赖（比 npm install 更快）
       - run: npm run build
       - run: npm publish --access public  # 发布到 npm
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}  # 使用 GitHub Secrets 中的 npm Token
+          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}  # 使用 GitHub Secrets 中的 npm Token
