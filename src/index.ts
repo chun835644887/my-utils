@@ -4,3 +4,10 @@ export function add(a: number, b: number): number {
   }
   return a + b;
 }
+
+export function sub(a: number, b: number): number {
+  if (typeof a === 'number' && typeof b === 'number') {
+    return a - b;
+  }
+  throw new Error('a and b must be a number');
+}
